@@ -1,0 +1,87 @@
+@import "../../../globalStyles";
+
+
+.TopBanner {
+    width: 100%;
+    padding: 0 109px*$vw;
+    padding-top: 0;
+    margin-bottom: 100px*$vw;
+
+    .slick-track {
+        display: flex;
+        flex-direction: row;
+    }
+}
+.TopBanner_slider {
+    border-radius: 10px*$vw;
+    overflow: hidden;
+    position: relative;
+}
+.TopBanner_slider_dots {
+    width: fit-content;
+    position: absolute;
+    bottom: 100px*$vw;
+    right: 191px*$vw;
+
+    @include flex(flex !important, row, nowrap, flex-start, center, unset);
+    gap: 40px*$vw;
+
+    .slick-active .topBanner_dot {
+        background-color: #0AABC1;
+    }
+}
+.topBanner_dot {
+    width: 75px*$vw;
+    height: 75px*$vw;
+    background-color: rgba(143, 143, 143, 0.8);
+    border-radius: 7px*$vw;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    span {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 48px*$vw;
+        line-height: 59px*$vw;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-left: 38px*$vw;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .TopBanner {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 50px*$TELvw;
+    }
+    .TopBanner_slider {
+        border-radius: 0;
+
+    }
+    .TopBanner_slider_dots {
+        bottom: 100px*$TELvw*0.2;
+        right: 191px*$TELvw*0.2;
+        gap: 15px*$TELvw;
+    }
+    .topBanner_dot {
+        width: 75px*$TELvw*0.3;
+        height: 75px*$TELvw*0.3;
+        border-radius: 7px*$TELvw*0.3;
+
+        span {
+            font-size: 48px*$TELvw*0.3;
+            line-height: 59px*$TELvw*0.3;
+            margin-left: 38px*$TELvw*0.3;
+        }
+    }
+}

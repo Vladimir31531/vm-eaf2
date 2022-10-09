@@ -1,0 +1,30 @@
+@import "../../globalStyles";
+
+
+
+.error404 {
+    width: 100%;
+    padding: 0 300px*$vw;
+    margin-top: 76px*$vw;
+
+    @include flex(flex, column, wrap, flex-start, center, unset);
+
+    h4 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 34px*$vw;
+        line-height: 41px*$vw;
+        color: #0AABC1;
+        margin-bottom: 15px*$vw;
+    }
+    h3 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 61px*$vw;
+        line-height: 74px*$vw;
+        color: #323232;
+        margin-bottom: 50px*$vw;
+    }
+}

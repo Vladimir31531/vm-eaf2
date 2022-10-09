@@ -1,0 +1,227 @@
+@import "../../../globalStyles";
+
+
+.Stats {
+    width: 100%;
+    position: relative;
+    padding: 50px*$vw 300px*$vw;
+    overflow: hidden;
+
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../../../assets/img/StatsBg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.Stats_header {
+    
+    h4 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 34px*$vw;
+        line-height: 41px*$vw;
+        color: #cc9955;
+        margin-bottom: 15px*$vw;
+    }
+    h3 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 61px*$vw;
+        line-height: 74px*$vw;
+        color: #FFFFFF;
+        margin-bottom: 15px*$vw;
+    }
+}
+.Stats_header_text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px*$vw;
+    line-height: 29px*$vw;
+    color: #C6C6C6;
+    margin-bottom: 50px*$vw;
+}
+.Stats_w {
+    width: 100%;
+    margin-bottom: 69px*$vw;
+
+    .inner {
+        width: fit-content;
+
+        @include flex(flex, row, nowrap, flex-start, center, unset);
+
+        gap: 60px*$vw;
+    }
+}
+.Stats_item {
+    min-width: 394px*$vw;
+    height: 252px*$vw;
+    background: #cc9955;
+    border-radius: 10px*$vw;
+    padding: 42px*$vw 28px*$vw;
+
+    @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+    .num {
+        width: 100px*$vw;
+        height: 100px*$vw;
+        margin-bottom: 27px*$vw;
+        /* padding-left: 60px*$vw; */
+        background-color: rgba(226, 169, 94, 0.7);
+        border-radius: 7px*$vw;
+
+        @include flex(flex, column, nowrap, center, center, unset);
+
+        /* font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 48px*$vw;
+        line-height: 59px*$vw;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        white-space: nowrap; */
+        
+        
+        /* @include flex(flex, row, nowrap, flex-start, center, unset); */
+
+        /* img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        } */
+
+        img {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+            margin-left: 60px*$vw;
+        }
+    }
+    .text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px*$vw;
+        line-height: 130.4%;
+        color: #FFFFFF;
+    }
+}
+
+.Stats_volunteer_btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 0 auto;
+    cursor: pointer;
+
+    @include flex(flex, row, nowrap, flex-start, center, unset);
+
+    .plus {
+        width: 60px*$vw;
+        height: 60px*$vw;
+        border: 2px*$vw solid #FFFFFF;
+        border-radius: 50%;
+        margin-right: 20px*$vw;
+
+        @include flex(flex, row, nowrap, center, center, unset);
+
+        svg {
+            width: 50%;
+            height: 50%;
+        }
+    }
+    span {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px*$vw;
+        line-height: 59px*$vw;
+        color: #FFFFFF;
+    }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .Stats {
+        width: 100%;
+        position: relative;
+        padding: 50px*$TELvw 20px*$TELvw;
+    }
+    .Stats_header_text {
+        font-size: 24px*$TELvw*0.5;
+        line-height: 29px*$TELvw*0.5;
+        margin-bottom: 50px*$TELvw*0.5;
+    }
+    .Stats_header {
+        text-align: center;
+        
+        h4 {
+            font-size: 34px*$TELvw*0.5;
+            line-height: 41px*$TELvw*0.5;
+            margin-bottom: 15px*$TELvw*0.5;
+        }
+        h3 {
+            font-size: 61px*$TELvw*0.5;
+            line-height: 74px*$TELvw*0.5;
+            margin-bottom: 60px*$TELvw*0.5;
+        }
+    }
+    .Stats_w {
+        width: 100%;
+        margin-bottom: 69px*$TELvw;
+        /* overflow-x: auto; */
+        
+        .inner {
+            /* height: 255px*$TELvw; */
+            margin: 0 auto;
+            gap: 30px*$TELvw;
+
+            @include flex(flex, column, nowrap, flex-start, center, unset);
+        }
+    }
+    .Stats_item {
+        width: 500px*$TELvw*0.5;
+        height: 150px*$TELvw;
+        border-radius: 10px*$TELvw*0.5;
+        padding: 42px*$TELvw*0.5 28px*$TELvw*0.5;
+
+        .num {
+            width: 84px*$TELvw*0.7;
+            height: 84px*$TELvw*0.7;
+            margin-bottom: 27px*$TELvw*0.7;
+            background-color: rgba(181, 181, 181, 0.6);
+            border-radius: 7px*$TELvw*0.7;
+            font-size: 48px*$TELvw*0.7;
+            line-height: 59px*$TELvw*0.7;
+            padding-left: 0;
+
+            img {
+                margin-left: 40px*$TELvw*0.7;
+            }
+        }
+        .text {
+            font-size: 22px*$TELvw*0.7;
+        }
+    }
+
+    .Stats_volunteer_btn {
+
+        .plus {
+            width: 60px*$TELvw*0.5;
+            height: 60px*$TELvw*0.5;
+            border: 2px*$TELvw*0.5 solid #FFFFFF;
+            margin-right: 20px*$TELvw*0.5;
+        }
+        span {
+            font-size: 48px*$TELvw*0.5;
+            line-height: 59px*$TELvw*0.5;
+        }
+    }
+}

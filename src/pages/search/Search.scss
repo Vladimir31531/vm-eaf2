@@ -1,0 +1,24 @@
+@import "../../globalStyles";
+
+
+
+.search_wrapper {
+    margin-top: 100px*$vw;
+}
+
+
+
+@media screen and (max-width: 500px) {
+    .search_wrapper {
+        margin-top: 100px*$vw;
+
+        &>div {
+            width: 48.9%;
+
+            &.CausesPage_content_noPosts {
+                width: 80%;
+                text-align: center;
+            }
+        }
+    }
+}

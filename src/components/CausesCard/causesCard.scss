@@ -1,0 +1,226 @@
+@import "../../globalStyles";
+
+
+
+.Causes_card {
+    width: 409px*$vw;
+    background: #FFFFFF;
+    border-radius: 10px*$vw;
+    overflow: hidden;
+    position: relative;
+
+    @include flex(flex, column, nowrap, flex-start, center, unset);
+}
+.Causes_card_img {
+    width: 100%;
+    height: 276px*$vw;
+    margin-bottom: 50px*$vw;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.Causes_card_donateBtn {
+    position: absolute;
+    right: 43px*$vw;
+    top: 250px*$vw;
+}
+.Causes_card_content {
+    width: 100%;
+    padding: 0 13px*$vw 36px*$vw 13px*$vw;
+
+    @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+    &>h4 {
+        height: 95px*$vw;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px*$vw;
+        line-height: 32px*$vw;
+        color: #cc9955;
+        margin-bottom: 12px*$vw;
+    }
+    .text {
+        margin-bottom: 50px*$vw;
+
+        p {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px*$vw;
+            line-height: 153.4%;
+            letter-spacing: 0.03em;
+            color: #323232;
+        }
+    }
+    .slider {
+        width: 100%;
+        height: 32px*$vw;
+        margin-bottom: 16px*$vw;
+
+        @include flex(flex, row, nowrap, center, center, unset);
+
+        .range {
+            width: 100%;
+            height: 2px*$vw;
+            background-color: #9B9B9B;
+            border-radius: 2px*$vw;
+
+            @include flex(flex, row, nowrap, flex-start, center, unset);
+
+            .raised {
+                min-width: 16px*$vw;
+                max-width: 361px*$vw;
+                height: 100%;
+                background-color: #cc9955;
+            }
+            .thumb {
+                width: 0;
+                position: relative;
+
+                span {
+                    width: 32px*$vw;
+                    height: 32px*$vw;
+                    background-color: #cc9955;
+                    border-radius: 50%;
+                    padding: 9px*$vw 3px*$vw;
+
+                    position: absolute;
+                    top: -16px*$vw;
+                    left: -16px*$vw;
+
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 12px*$vw;
+                    line-height: 15px*$vw;
+                    color: #FFFFFF;
+
+                    @include flex(flex, row, nowrap, center, center, unset);
+                }
+            }
+        }
+    }
+}
+.Causes_card_bottom {
+    width: 100%;
+    padding: 25px*$vw 13px*$vw;
+    border-top: 1px solid #BFBFBF;
+
+    @include flex(flex, row, nowrap, space-between, center, unset);
+
+    .item {
+        @include flex(flex, row, nowrap, flex-start, center, unset);
+
+        .left {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px*$vw;
+            line-height: 130.4%;
+            color: #888888;
+            margin-right: 5px*$vw;
+        }
+        .right {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px*$vw;
+            line-height: 130.4%;
+            color: #cc9955;
+        }
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .Causes_card {
+        width: 409px*$TELvw*0.6;
+        border-radius: 10px*$TELvw*0.6;
+    }
+    .Causes_card_img {
+        height: 276px*$TELvw*0.6;
+        margin-bottom: 50px*$TELvw*0.6;
+    }
+    .Causes_card_donateBtn {
+        right: 43px*$TELvw*0.6;
+        top: 257px*$TELvw*0.6;
+    }
+    .Causes_card_content {
+        padding: 0 13px*$TELvw*0.6 36px*$TELvw*0.6 13px*$TELvw*0.6;
+
+        h4 {
+            height: 50px*$TELvw;
+            font-size: 22px*$TELvw*0.6;
+            line-height: 27px*$TELvw*0.6;
+            margin-bottom: 12px*$TELvw*0.6;
+        }
+        .text {
+            margin-bottom: 50px*$TELvw*0.6;
+
+            p {
+                font-size: 16px*$TELvw*0.6;
+            }
+        }
+        .slider {
+            width: 100%;
+            height: 32px*$TELvw*0.6;
+            margin-bottom: 16px*$TELvw*0.6;
+
+            .range {
+                width: 100%;
+                height: 2px*$TELvw*0.6;
+                border-radius: 2px*$TELvw*0.6;
+
+                .raised {
+                    min-width: 16px*$TELvw*0.6;
+                    max-width: 361px*$TELvw*0.6;
+                }
+                .thumb {
+
+                    span {
+                        width: 32px*$TELvw*0.6;
+                        height: 32px*$TELvw*0.6;
+                        padding: 9px*$TELvw*0.6 3px*$TELvw*0.6;
+
+                        top: -16px*$TELvw*0.6;
+                        left: -16px*$TELvw*0.6;
+
+                        font-size: 12px*$TELvw*0.6;
+                        line-height: 15px*$TELvw*0.6;
+                    }
+                }
+            }
+        }
+    }
+    .Causes_card_bottom {
+        width: 100%;
+        padding: 25px*$TELvw*0.6 13px*$TELvw*0.6;
+        border-top: 1px solid #BFBFBF;
+        flex-wrap: wrap;
+
+        .item {
+            &:first-child {
+                margin-right: 10px*$TELvw;
+            }
+
+            .left {
+                font-size: 18px*$TELvw*0.6;
+                margin-right: 5px*$TELvw*0.6;
+            }
+            .right {
+                font-size: 18px*$TELvw*0.6;
+                line-height: 130.4%;
+            }
+        }
+    }
+}

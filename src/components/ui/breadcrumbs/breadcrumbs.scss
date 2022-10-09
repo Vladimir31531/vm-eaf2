@@ -1,0 +1,40 @@
+@import "../../../globalStyles";
+
+
+.breadcrumbs {
+    width: 1320px*$vw;
+    margin: 0 auto;
+    padding: 40px*$vw 0 10px*$vw 0;
+    border-bottom: 0.5px*$vw solid #fff;
+
+    .crumb {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px*$vw;
+        line-height: 17px*$vw;
+        color: #fff;
+    }
+    .crumb_curr {
+        font-weight: 700;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .breadcrumbs {
+        width: 320px*$TELvw;
+        padding: 40px*$TELvw*0.8 0 10px*$TELvw*0.8 0;
+        border-bottom: 0.5px*$TELvw*0.8 solid #9D9B9B;
+
+        .crumb {
+            font-size: 14px*$TELvw*0.8;
+            line-height: 17px*$TELvw*0.8;
+        }
+    }
+}

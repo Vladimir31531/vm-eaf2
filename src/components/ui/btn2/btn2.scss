@@ -1,0 +1,35 @@
+@import "../../../globalStyles";
+
+
+
+.btn2 {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-bottom: 2px*$vw solid #cc9955;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px*$vw;
+    line-height: 130.4%;
+    color: #fff;
+}
+.Causes_card_content .btn2 {
+    color: #323232;
+}
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    .btn2 {
+        border-bottom: 2px*$TELvw*0.9 solid #cc9955;
+        font-size: 18px*$TELvw*0.9;
+    }
+    .Causes_card_content .btn2 {
+        color: #323232;
+    }
+}

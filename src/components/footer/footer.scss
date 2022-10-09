@@ -1,0 +1,322 @@
+@import "../../globalStyles";
+
+
+.Footer {
+    width: 100%;
+    padding: 50px*$vw 300px*$vw 0 300px*$vw;
+    margin-top: 100px*$vw;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/img/footerBG.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    @include flex(flex, column, nowrap, flex-start, center, unset);
+}
+.Footer_content {
+    width: 100%;
+    padding-bottom: 50px*$vw;
+    border-bottom: 1px*$vw solid #969696;
+
+    @include flex(flex, row, nowrap, space-between, flex-start, unset);
+
+    gap: 76px*$vw;
+}
+
+.Footer_logoText {
+    width: 400px*$vw;
+
+    @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+}
+.Footer_logo {
+    width: 155px*$vw;
+    height: 85px*$vw;
+    margin-bottom: 20px*$vw;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+.Footer_text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px*$vw;
+    line-height: 25px*$vw;
+    color: #FFFFFF;
+    margin-bottom: 20px*$vw;
+}
+.Footer_socials {
+    width: 100%;
+
+    @include flex(flex, row, nowrap, flex-start, center, unset);
+    gap: 30px*$vw;
+}
+.Footer_oneSocial {
+    width: 20px*$vw;
+    height: 20px*$vw;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.Footer_column {
+    width: auto;
+
+    @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+    &>.title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px*$vw;
+        line-height: 32px*$vw;
+        color: #cc9955;
+        white-space: nowrap;
+        margin-bottom: 20px*$vw;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px*$vw;
+    }
+
+    li {
+        &:hover span {
+            color: #cc9955;
+        }
+        span {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px*$vw;
+            line-height: 22px*$vw;
+            color: #FFFFFF;
+        }
+    }
+}
+.Footer_nav {
+    li {
+        &:hover {
+            &::before {
+                color: #cc9955;
+            }
+        }
+        &::before {
+            content: '\203A';
+            font-size: 25px*$vw;
+            color: #fff;
+            margin-right: 7px*$vw;
+        }
+    }
+}
+
+.Footer_contacts {
+    .Footer_contact {
+        @include flex(flex, row, nowrap, flex-start, center, unset);
+
+        .icon {
+            width: 26px*$vw;
+            height: 26px*$vw;
+            margin-right: 24px*$vw;
+
+            svg {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.Footer_column_newsW {
+    @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+    gap: 20px*$vw;
+}
+
+.small_newCard {
+    width: 254px*$vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px*$vw;
+
+    .img {
+        width: 85px*$vw;
+        height: 85px*$vw;
+        border-radius: 3px*$vw;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+    }
+    .content {
+        width: 151px*$vw;
+    }
+    .title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px*$vw;
+        line-height: 17px*$vw;
+        color: #FFFFFF;
+        margin-bottom: 17px*$vw;
+    }
+    .button button {
+        font-size: 14px*$vw;
+        color: #FFFFFF;
+    }
+}
+
+.Footer_copyright {
+    width: 100%;
+    padding: 28px*$vw 0;
+
+    @include flex(flex, row, nowrap, center, center, unset);
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px*$vw;
+    line-height: 155.9%;
+    color: #FFFFFF;
+
+    a {
+        color: #cc9955;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .Footer {
+        width: 100%;
+        padding: 20px*$TELvw 20px*$TELvw 0 20px*$TELvw;
+        margin-top: 100px*$vw;
+    }
+    .Footer_content {
+        width: 100%;
+        padding-bottom: 20px*$TELvw;
+        border-bottom: 1px*$TELvw solid #969696;
+
+        @include flex(flex, column, nowrap, flex-start, center, unset);
+
+        gap: 42px*$TELvw;
+    }
+
+    .Footer_logoText {
+        width: 100%;
+
+        @include flex(flex, column, nowrap, flex-start, center, unset);
+    }
+    .Footer_logo {
+        width: 155px*$TELvw*0.6;
+        height: 85px*$TELvw*0.6;
+        margin-bottom: 20px*$TELvw*0.6;
+    }
+    .Footer_text {
+        font-size: 16px*$TELvw*0.7;
+        line-height: 25px*$TELvw*0.7;
+        margin-bottom: 20px*$TELvw*0.7;
+        text-align: center;
+    }
+    .Footer_socials {
+        width: fit-content;
+
+        gap: 30px*$TELvw;
+    }
+    .Footer_oneSocial {
+        width: 20px*$TELvw;
+        height: 20px*$TELvw;
+    }
+
+    .Footer_column {
+        width: auto;
+        align-items: center;
+
+        &>.title {
+            font-size: 26px*$TELvw*0.8;
+            line-height: 32px*$TELvw*0.8;
+            margin-bottom: 20px*$TELvw*0.8;
+        }
+
+        ul {
+            align-items: center;
+            gap: 15px*$TELvw*0.8;
+        }
+
+        li {
+            span {
+                font-size: 18px*$TELvw*0.8;
+                line-height: 22px*$TELvw*0.8;
+            }
+        }
+    }
+    .Footer_nav {
+        display: none;
+    }
+
+    .Footer_contacts {
+        .Footer_contact {
+            .icon {
+                width: 26px*$TELvw*0.8;
+                height: 26px*$TELvw*0.8;
+                margin-right: 24px*$TELvw*0.3;
+            }
+        }
+    }
+
+    .Footer_column_newsW {
+        @include flex(flex, row, nowrap, flex-start, flex-start, unset);
+        gap: 20px*$vw;
+    }
+
+    .small_newCard {
+        width: 254px*$TELvw*0.6;
+        gap: 18px*$vw;
+
+        .img {
+            width: 85px*$TELvw*0.6;
+            height: 85px*$TELvw*0.6;
+            border-radius: 3px*$TELvw*0.6;
+            overflow: hidden;
+        }
+        .content {
+            width: 151px*$TELvw*0.6;
+        }
+        .title {
+            font-size: 14px*$TELvw*0.6;
+            line-height: 17px*$TELvw*0.6;
+            margin-bottom: 2px*$TELvw;
+        }
+        .button button {
+            font-size: 14px*$TELvw*0.6;
+        }
+    }
+
+    .Footer_copyright {
+        padding: 28px*$TELvw*0.7 0;
+        font-size: 16px*$TELvw*0.7;
+    }
+}

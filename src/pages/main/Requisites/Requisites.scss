@@ -1,0 +1,112 @@
+@import "../../../globalStyles";
+
+
+
+.Requisites {
+    width: 100%;
+    padding: 0 300px*$vw;
+    position: relative;
+    margin: 100px*$vw 0;
+
+    @include flex(flex, column, nowrap, flex-start, center, unset);
+
+    &>h4 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 34px*$vw;
+        line-height: 41px*$vw;
+        color: #cc9955;
+        margin-bottom: 15px*$vw;
+    }
+    &>h3 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 61px*$vw;
+        line-height: 74px*$vw;
+        color: #fff;
+        margin-bottom: 50px*$vw;
+    }
+}
+.Requisites_bgText {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 180px*$vw;
+    line-height: 219px*$vw;
+    color: rgba(192, 192, 192, 0.1);
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.Requisites_w {
+    width: 100%;
+
+    @include flex(flex, row, nowrap, space-between, flex-start, unset);
+}
+
+.Requisites_content {
+    width: 800px*$vw;
+    padding: 25px*$vw;
+    background: #E9AD62;
+    border-radius: 20px*$vw;
+    align-self: flex-start;
+}
+.Requisites_iframe {
+    width: 450px*$vw;
+    height: fit-content;
+
+    iframe {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .Requisites {
+        width: 100%;
+        padding: 0 10px*$TELvw;
+        position: relative;
+
+        &>h4 {
+            font-size: 34px*$TELvw*0.5;
+            line-height: 41px*$TELvw*0.5;
+            margin-bottom: 15px*$TELvw*0.5;
+        }
+        &>h3 {
+            font-size: 61px*$TELvw*0.5;
+            line-height: 74px*$TELvw*0.5;
+            margin-bottom: 50px*$TELvw*0.5;
+        }
+    }
+
+    .Requisites_w {
+        width: 100%;
+
+        @include flex(flex, column, nowrap, flex-start, center, unset);
+    }
+
+    .Requisites_content {
+        width: 100%;
+        padding: 25px*$TELvw*0.5;
+        border-radius: 20px*$TELvw*0.5;
+    }
+
+    .Requisites_iframe {
+        width: 95%;
+        margin-top: 50px*$TELvw;
+        height: fit-content;
+
+        iframe {
+            width: 100%;
+        }
+    }
+}

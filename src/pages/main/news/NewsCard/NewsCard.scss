@@ -1,0 +1,209 @@
+@import "../../../../globalStyles";
+
+
+.NewsCard {
+    width: 400px*$vw;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px*$vw;
+    overflow: hidden;
+
+    @include flex(flex, column, nowrap, flex-start, center, unset);
+}
+.News_card_img {
+    width: 100%;
+    height: 211px*$vw;
+    background: #000;
+    position: relative;
+
+    .dark {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.35);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.News_card_authorCircle {
+    width: 50px*$vw;
+    height: 50px*$vw;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 185px*$vw;
+    left: 22px*$vw;
+}
+
+.News_card_content {
+    width: 100%;
+    padding: 30px*$vw;
+    position: relative;
+
+    .title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px*$vw;
+        line-height: 24px*$vw;
+        color: #323232;
+        margin-bottom: 35px*$vw;
+    }
+
+    .btn2 {
+        color: #323232;
+    }
+}
+
+.News_card_author {
+    position: absolute;
+    top: -21.5px*$vw;
+    left: 27.5px*$vw;
+
+    @include flex(flex, row, nowrap, flex-start, flex-start, unset);
+}
+.News_card_authorImg {
+    width: 39px*$vw;
+    height: 39px*$vw;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.News_card_authorName {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px*$vw;
+    line-height: 17px*$vw;
+    color: #FFFFFF;
+    margin-left: 15px*$vw;
+}
+
+.News_card_bottom {
+    width: 100%;
+    padding: 20px*$vw 30px*$vw;
+    border-top: 1px*$vw solid #E0E0E0;
+
+    @include flex(flex, row, nowrap, space-between, center, unset);
+
+    .left,
+    .right {
+        @include flex(flex, row, nowrap, flex-start, center, unset);
+
+        .icon {
+            width: 25px*$vw;
+            height: 25px*$vw;
+            margin-right: 15px*$vw;
+
+            svg {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        span {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px*$vw;
+            line-height: 20px*$vw;
+            color: #8B8B8B;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .NewsCard {
+        width: 400px*$TELvw*0.6;
+        border-radius: 10px*$TELvw*0.6;
+        overflow: hidden;
+    }
+    .News_card_img {
+        width: 100%;
+        height: 211px*$TELvw*0.6;
+    }
+    .News_card_authorCircle {
+        width: 50px*$TELvw*0.6;
+        height: 50px*$TELvw*0.6;
+        top: 185px*$TELvw*0.6;
+        left: 22px*$TELvw*0.6;
+    }
+
+    .News_card_content {
+        width: 100%;
+        padding: 30px*$TELvw*0.6;
+        position: relative;
+
+        .title {
+            font-size: 20px*$TELvw*0.6;
+            line-height: 24px*$TELvw*0.6;
+            margin-bottom: 35px*$TELvw*0.6;
+        }
+    }
+
+    .News_card_author {
+        position: absolute;
+        top: -21.5px*$TELvw*0.6;
+        left: 27.5px*$TELvw*0.6;
+    }
+    .News_card_authorImg {
+        width: 39px*$TELvw*0.6;
+        height: 39px*$TELvw*0.6;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .News_card_authorName {
+        font-size: 14px*$TELvw*0.6;
+        line-height: 17px*$TELvw*0.6;
+        margin-left: 15px*$TELvw*0.6;
+    }
+
+    .News_card_bottom {
+        width: 100%;
+        padding: 20px*$TELvw*0.6 30px*$TELvw*0.6;
+        border-top: 1px*$TELvw*0.6 solid #E0E0E0;
+
+        @include flex(flex, row, wrap, space-between, flex-start, unset);
+
+        gap: 8px*$TELvw;
+
+        .left,
+        .right {
+
+            .icon {
+                width: 25px*$TELvw*0.6;
+                height: 25px*$TELvw*0.6;
+                margin-right: 15px*$TELvw*0.6;
+            }
+            span {
+                font-size: 16px*$TELvw*0.6;
+                line-height: 20px*$TELvw*0.6;
+            }
+        }
+    }
+}

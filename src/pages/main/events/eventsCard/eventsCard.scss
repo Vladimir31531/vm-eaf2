@@ -1,0 +1,261 @@
+@import "../../../../globalStyles";
+
+
+
+.Events_card {
+    width: 100%;
+    padding: 15px*$vw;
+    background: #F1F1F1;
+    border-radius: 10px*$vw;
+    overflow: hidden;
+
+    @include flex(flex, row, nowrap, flex-start, flex-start, unset);
+
+    .btn2 {
+        color: #323232;
+    }
+}
+.Events_card_date {
+    width: 100px*$vw;
+    height: 100px*$vw;
+    background: #cc9955;
+    border-radius: 2px*$vw;
+    margin-right: 12px*$vw;
+
+    @include flex(flex, column, nowrap, center, center, unset);
+
+    .num {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px*$vw;
+        line-height: 34px*$vw;
+        color: #FFFFFF;
+    }
+    .month {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px*$vw;
+        line-height: 24px*$vw;
+        color: #FFFFFF;
+    }
+}
+.Events_card_content {
+    width: 530px*$vw;
+
+    @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+    .time {
+        width: fit-content;
+        margin-bottom: 7px*$vw;
+
+        @include flex(flex, row, nowrap, flex-start, center, unset);
+
+        .icon {
+            width: 21px*$vw;
+            height: 21px*$vw;
+            margin-right: 6px*$vw;
+
+            svg {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .text {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px*$vw;
+            line-height: 20px*$vw;
+            color: #cc9955;
+        }
+    }
+    h5 {
+        height: 72px*$vw;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px*$vw;
+        line-height: 24px*$vw;
+        color: #323232;
+        margin-bottom: 7px*$vw;
+    }
+    &>.text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px*$vw;
+        line-height: 20px*$vw;
+        color: #797979;
+    }
+}
+
+
+
+
+.Events_card_big {
+    width: 611px*$vw;
+    padding: 0;
+    padding-bottom: 38px*$vw;
+    background: #F1F1F1;
+    border-radius: 10px*$vw;
+    position: relative;
+
+    @include flex(flex, column, nowrap, flex-start, center, unset);
+
+    .Events_card_date {
+        position: absolute;
+        top: 20px*$vw;
+        right: 20px*$vw;
+        margin: 0;
+        width: unset;
+        height: unset;
+        padding: 15px*$vw 20px*$vw;
+        flex-direction: row;
+        border-radius: 10px*$vw;
+
+        span {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px*$vw;
+            line-height: 22px*$vw;
+            text-transform: uppercase;
+            color: #FFFBF0;
+        }
+
+        .num {
+            margin-right: 5px*$vw;
+        }
+    }
+    .Events_card_content {
+        width: 100%;
+        padding: 0 23px*$vw;
+        margin-bottom: 50px*$vw;
+    }
+}
+.Events_card_img {
+    width: 611px*$vw;
+    height: 360px*$vw;
+    margin-bottom: 22px*$vw;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.Events_card_btn {
+    align-self: flex-start;
+    margin-left: 23px*$vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .Events_card {
+        width: 100%;
+        padding: 15px*$TELvw*0.5;
+        border-radius: 10px*$TELvw*0.5;
+    }
+    .Events_card_date {
+        width: 100px*$TELvw*0.75;
+        height: 100px*$TELvw*0.75;
+        border-radius: 2px*$TELvw*0.75;
+        margin-right: 12px*$TELvw*0.75;
+
+        .num {
+            font-size: 28px*$TELvw*0.75;
+            line-height: 34px*$TELvw*0.75;
+        }
+        .month {
+            font-size: 20px*$TELvw*0.75;
+            line-height: 24px*$TELvw*0.75;
+        }
+    }
+    .Events_card_content {
+        width: 234px*$TELvw;
+
+        @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+        .time {
+            width: fit-content;
+            margin-bottom: 7px*$TELvw*0.6;
+
+            .icon {
+                width: 21px*$TELvw*0.6;
+                height: 21px*$TELvw*0.6;
+                margin-right: 6px*$TELvw*0.6;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .text {
+                font-size: 16px*$TELvw*0.6;
+                line-height: 20px*$TELvw*0.6;
+            }
+        }
+        h5 {
+            font-size: 20px*$TELvw*0.65;
+            line-height: 24px*$TELvw*0.65;
+            margin-bottom: 7px*$TELvw*0.65;
+        }
+        &>.text {
+            font-size: 16px*$TELvw*0.65;
+            line-height: 20px*$TELvw*0.65;
+        }
+    }
+
+
+
+
+    .Events_card_big {
+        width: 100%;
+        padding: 0;
+        padding-bottom: 38px*$TELvw*0.5;
+        border-radius: 10px*$TELvw*0.5;
+        position: relative;
+        overflow: hidden;
+
+        .Events_card_date {
+            position: absolute;
+            top: 20px*$TELvw*0.5;
+            right: 20px*$TELvw*0.5;
+            padding: 15px*$TELvw*0.5 20px*$TELvw*0.5;
+            border-radius: 10px*$TELvw*0.5;
+
+            span {
+                font-size: 18px*$TELvw*0.5;
+                line-height: 22px*$TELvw*0.5;
+            }
+
+            .num {
+                margin-right: 5px*$TELvw*0.5;
+            }
+        }
+        .Events_card_content {
+            width: 100%;
+            padding: 0 23px*$TELvw*0.5;
+            margin-bottom: 50px*$TELvw*0.5;
+        }
+    }
+    .Events_card_img {
+        width: 100%;
+        height: 360px*$TELvw*0.5;
+        margin-bottom: 22px*$TELvw*0.5;
+    }
+    .Events_card_btn {
+        margin-left: 23px*$TELvw*0.5;
+    }
+}

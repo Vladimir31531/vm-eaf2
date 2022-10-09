@@ -1,0 +1,201 @@
+@import "../../../globalStyles";
+
+
+
+.Partners {
+    width: 100%;
+    padding: 0 300px*$vw;
+    position: relative;
+    margin-top: 200px*$vw;
+
+    @include flex(flex, column, nowrap, flex-start, center, unset);
+
+    &>h4 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 34px*$vw;
+        line-height: 41px*$vw;
+        color: #cc9955;
+        margin-bottom: 15px*$vw;
+    }
+    &>h3 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 61px*$vw;
+        line-height: 74px*$vw;
+        color: #fff;
+        margin-bottom: 50px*$vw;
+    }
+}
+.Partners_bgText {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 180px*$vw;
+    line-height: 219px*$vw;
+    color: rgba(192, 192, 192, 0.1);
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.Partners_content {
+    width: 100%;
+    margin-top: 100px*$vw;
+    margin-bottom: 21px*$vw;
+
+    @include flex(flex, row, wrap, flex-start, center, unset);
+    
+    gap: 17.5px*$vw;
+}
+
+
+
+.Partners_card {
+    width: 250px*$vw;
+    height: 150px*$vw;
+    background-color: #fff;
+    border-radius: 10px*$vw;
+    overflow: hidden;
+
+    @include flex(flex, row, nowrap, center, center, unset);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.partners_slider {
+    width: 100%;
+    position: relative;
+
+    .partners_slider_inner {
+        width: 100%;
+        overflow: hidden;
+
+        .slick-track {
+            display: flex;
+            gap: 10px*$vw;
+        }
+    }
+    button {
+        width: 25px*$vw;
+        height: 25px*$vw;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    .prev {
+        left: -20px*$vw;
+    }
+    .next {
+        transform: rotate(180deg);
+        top: 40%;
+        right: -30px*$vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .Partners {
+        width: 100%;
+        padding: 0 20px*$TELvw;
+        position: relative;
+
+        &>h4 {
+            font-size: 34px*$TELvw*0.5;
+            line-height: 41px*$TELvw*0.5;
+            margin-bottom: 15px*$TELvw*0.5;
+        }
+        &>h3 {
+            font-size: 61px*$TELvw*0.5;
+            line-height: 74px*$TELvw*0.5;
+            margin-bottom: 50px*$TELvw*0.5;
+        }
+    }
+
+
+    .Partners_content {
+        width: 100%;
+        margin-top: 100px*$vw;
+        margin-bottom: 21px*$vw;
+
+        @include flex(flex, row, wrap, flex-start, center, unset);
+        
+        gap: 17.5px*$TELvw*0.5;
+    }
+
+
+
+    .Partners_card {
+        width: 250px*$TELvw*0.4;
+        height: 150px*$TELvw*0.4;
+        border-radius: 10px*$TELvw*0.4;
+    }
+
+    .partners_slider {
+        width: 100%;
+        position: relative;
+
+        .partners_slider_inner {
+            width: 100%;
+            overflow: hidden;
+
+            .slick-track {
+                display: flex;
+                gap: 10px*$TELvw;
+            }
+        }
+        button {
+            width: 25px*$TELvw*0.6;
+            height: 25px*$TELvw*0.6;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            cursor: pointer;
+
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            svg {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .prev {
+            left: -20px*$TELvw*0.6;
+        }
+        .next {
+            transform: rotate(180deg);
+            top: 40%;
+            right: -30px*$TELvw*0.6;
+        }
+    }
+
+}

@@ -1,0 +1,178 @@
+@import "../../globalStyles";
+
+
+
+.VolunteerModal {
+    width: 800px;
+    height: 90%;
+    background-color: #cc9955;
+    border-radius: 43px*$vw;
+    position: relative;
+
+    @include flex(flex, row, nowrap, flex-start, center, unset);
+}
+.VolunteerModal_bgImg {
+    width: 423px*$vw;
+    height: 600px*$vw;
+    position: absolute;
+    left: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.VolunteerModal_content {
+    height: 600px*$vw;
+    padding: 50px*$vw 41px*$vw 100px*$vw 418px*$vw;
+
+    @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+    .title,
+    .alert {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px*$vw;
+        line-height: 39px*$vw;
+        color: #FFFFFF;
+        margin-bottom: 90px*$vw;
+    }
+    .alert {
+        font-size: 32px*$vw*0.7;
+        line-height: 39px*$vw*0.7;
+    }
+    form {
+
+        input,
+        textarea {
+            width: 262px*$vw;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            border-bottom: 1px*$vw solid #FFFFFF;
+            
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px*$vw;
+            line-height: 17px*$vw;
+            color: #FFFFFF;
+
+            &::placeholder {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 14px*$vw;
+                line-height: 17px*$vw;
+                color: #FFFFFF;
+            }
+        }
+        input {
+            height: 27px*$vw;
+            margin-bottom: 15px*$vw;
+        }
+        textarea {
+            height: 113px*$vw;
+            resize: none;
+            margin-bottom: 50px*$vw;
+        }
+        button {
+            padding: 7px*$vw 60px*$vw;
+            background: #FFFFFF;
+            border-radius: 34px*$vw;
+            border: none;
+            outline: none;
+            cursor: pointer;
+
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px*$vw;
+            line-height: 17px*$vw;
+            color: #cc9955;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .VolunteerModal {
+        width: 100%;
+        height: 80%;
+        margin: 0 auto;
+        overflow-y: auto;
+        border-radius: 43px*$TELvw*0.5;
+    }
+    .VolunteerModal_bgImg {
+        display: none;
+    }
+    .VolunteerModal_content {
+        width: 95%;
+        height: auto;
+        padding: 50px*$TELvw*0.5;
+        margin: 0 auto;
+
+        @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+        .title,
+        .alert {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px*$TELvw*0.6;
+            line-height: 39px*$TELvw*0.6;
+            color: #FFFFFF;
+            margin-bottom: 90px*$TELvw*0.6;
+        }
+        .alert {
+            font-size: 32px*$TELvw*0.6*0.7;
+            line-height: 39px*$TELvw*0.6*0.7;
+        }
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input,
+            textarea {
+                width: 100%;
+                border-bottom: 1px*$TELvw*0.6 solid #FFFFFF;
+
+                font-size: 14px*$TELvw;
+                line-height: 17px*$TELvw;
+
+                &::placeholder {
+                    font-size: 14px*$TELvw;
+                    line-height: 17px*$TELvw;
+                }
+            }
+            input {
+                height: 30px*$TELvw;
+                margin-bottom: 15px*$TELvw;
+            }
+            textarea {
+                height: 113px*$TELvw;
+                margin-bottom: 50px*$TELvw*0.6;
+            }
+            button {
+                padding: 7px*$TELvw*0.6 60px*$TELvw*0.6;
+                border-radius: 34px*$TELvw*0.6;
+                font-size: 14px*$TELvw;
+                line-height: 17px*$TELvw;
+            }
+        }
+    }
+}

@@ -1,0 +1,280 @@
+@import "../../globalStyles";
+
+
+
+
+.SingleEvent {
+    width: 100%;
+    padding: 0 300px*$vw;
+
+    @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+}
+.SingleEvent {
+    width: 100%;
+    padding: 50px*$vw 300px*$vw;
+}
+.SingleEvent_img {
+    width: 100%;
+    height: 633px*$vw;
+    border-radius: 10px*$vw;
+    overflow: hidden;
+    padding-bottom: 71px*$vw;
+    position: relative;
+    margin-bottom: 50px*$vw;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px*$vw;
+    }
+}
+.SingleEvent_timer_w {
+    width: 1250px*$vw;
+    height: 141px*$vw;
+    padding: 30px*$vw 45px*$vw;
+    background: #FFFFFF;
+    box-shadow: 9px*$vw 11px*$vw 4px*$vw rgba(128, 128, 128, 0.25);
+    border-radius: 10px*$vw;
+    position: absolute;
+    bottom: 15px*$vw;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+
+    @include flex(flex, row, nowrap, space-between, center, unset);
+}
+
+
+
+
+.SingleEvent_content_w {
+    width: 100%;
+
+    @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+    h2 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 34px*$vw;
+        line-height: 41px*$vw;
+        color: #fff;
+        margin-bottom: 20px*$vw;
+    }
+}
+.SingleEvent_time {
+    @include flex(flex, row, nowrap, flex-start, center, unset);
+
+    gap: 30px*$vw;
+    margin-bottom: 20px*$vw;
+
+    .time {
+        width: fit-content;
+        margin-bottom: 7px*$vw;
+
+        @include flex(flex, row, nowrap, flex-start, center, unset);
+
+        .icon {
+            width: 21px*$vw;
+            height: 21px*$vw;
+            margin-right: 6px*$vw;
+
+            svg {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .text {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px*$vw;
+            line-height: 20px*$vw;
+            color: #cc9955;
+        }
+    }
+}
+.SingleEvent_date {
+    background: #cc9955;
+
+    @include flex(flex, column, nowrap, center, center, unset);
+
+    margin: 0;
+    padding: 10px*$vw 15px*$vw;
+    flex-direction: row;
+    border-radius: 10px*$vw;
+
+    .num {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px*$vw;
+        line-height: 24px*$vw;
+        color: #FFFFFF;
+        margin-right: 5px*$vw;
+    }
+    .month {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px*$vw;
+        line-height: 24px*$vw;
+        color: #FFFFFF;
+    }
+}
+
+
+.SingleEvent_content_text {
+    width: 100%;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px*$vw;
+    line-height: 176.9%;
+    color: #797979;
+    margin-bottom: 50px*$vw;
+}
+
+.SingleEvent_video {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 30px*$vw;
+
+    video {
+        width: 100%;
+        height: 565px*$vw;
+        margin: 50px*$vw 0;
+    }
+}
+
+.SingleEvent_map {
+    width: 100%;
+    height: 565px*$vw;
+    margin-bottom: 30px*$vw;
+
+    iframe {
+        border: none;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    .SingleEvent {
+        width: 100%;
+        padding: 20px*$TELvw;
+
+        @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+    }
+    .SingleEvent_img {
+        width: 100%;
+        height: 270px*$TELvw;
+        border-radius: 10px*$vw;
+        overflow: hidden;
+        padding-bottom: 65px*$TELvw;
+        position: relative;
+        margin-bottom: 50px*$vw;
+    }
+    .SingleEvent_timer_w {
+        width: 90%;
+        height: auto;
+        padding: 30px*$TELvw*0.5 45px*$TELvw*0.5;
+        background: #FFFFFF;
+        box-shadow: 9px*$TELvw*0.5 11px*$TELvw*0.5 4px*$TELvw*0.5 rgba(128, 128, 128, 0.25);
+        border-radius: 10px*$TELvw*0.5;
+        position: absolute;
+        bottom: 15px*$TELvw*0.5;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 2;
+
+        @include flex(flex, column, nowrap, flex-start, center, unset);
+        gap: 10px*$TELvw;
+    }
+
+
+
+
+    .SingleEvent_content_w {
+        width: 100%;
+
+        @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+        h2 {
+            font-size: 34px*$TELvw*0.6;
+            line-height: 41px*$TELvw*0.6;
+            margin-bottom: 20px*$TELvw*0.6;
+        }
+    }
+    .SingleEvent_time {
+        gap: 30px*$vw;
+        margin-bottom: 20px*$TELvw*0.7;
+
+        .time {
+            width: fit-content;
+            margin-bottom: 7px*$TELvw*0.7;
+
+            .icon {
+                width: 21px*$TELvw*0.7;
+                height: 21px*$TELvw*0.7;
+                margin-right: 6px*$TELvw*0.7;
+            }
+            .text {
+                font-size: 16px*$TELvw*0.7;
+                line-height: 20px*$TELvw*0.7;
+                color: #cc9955;
+            }
+        }
+    }
+    .SingleEvent_date {
+        padding: 10px*$TELvw*0.5 15px*$TELvw*0.5;
+        border-radius: 10px*$TELvw*0.5;
+
+        .num {
+            font-size: 20px*$TELvw*0.5;
+            line-height: 24px*$TELvw*0.5;
+            margin-right: 5px*$TELvw*0.5;
+        }
+        .month {
+            font-size: 20px*$TELvw*0.5;
+            line-height: 24px*$TELvw*0.5;
+        }
+    }
+
+
+    .SingleEvent_content_text {
+        font-size: 18px*$TELvw*0.7;
+        margin-bottom: 50px*$TELvw*0.7;
+    }
+
+    .SingleEvent_video {
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 30px*$TELvw*0.5;
+
+        video {
+            width: 100%;
+            height: 565px*$TELvw*0.5;
+            margin: 50px*$TELvw*0.5 0;
+        }
+    }
+
+    .SingleEvent_map {
+        width: 100%;
+        height: 300px*$TELvw;
+        margin-bottom: 30px*$TELvw;
+    }
+}

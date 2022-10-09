@@ -1,0 +1,48 @@
+@import "../../../globalStyles";
+
+
+
+.btn1 {
+    padding: 15px*$vw*0.8 30px*$vw*0.8;
+    background: #ffef2f;
+    border-radius: 35px*$vw*0.8;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px*$vw*0.8;
+    line-height: 24px*$vw*0.8;
+    text-transform: uppercase;
+    color: #323232;
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+    .btn1 {
+        padding: 15px*$TELvw*0.8*0.5 30px*$TELvw*0.8*0.5;
+        border-radius: 35px*$TELvw*0.8*0.5;
+        font-size: 20px*$TELvw*0.8*0.5;
+        line-height: 24px*$TELvw*0.8*0.5;
+    }
+    .topBanner_slide_content {
+        .btn1 {
+            padding: 15px*$TELvw*0.8*0.7 30px*$TELvw*0.8*0.7;
+            border-radius: 35px*$TELvw*0.8*0.7;
+            font-size: 20px*$TELvw*0.8*0.7;
+            line-height: 24px*$TELvw*0.8*0.7;
+        }
+    }
+    .contacts_mapForm {
+        .btn1 {
+            padding: 15px*$TELvw*0.8*0.7 30px*$TELvw*0.8*0.7;
+            border-radius: 35px*$TELvw*0.8*0.7;
+            font-size: 20px*$TELvw*0.8*0.7;
+            line-height: 24px*$TELvw*0.8*0.7;
+        }
+    }
+}

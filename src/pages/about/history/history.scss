@@ -1,0 +1,51 @@
+@import "../../../globalStyles";
+
+
+.History {
+    width: 100%;
+    padding: 100px*$vw 300px*$vw;
+
+    &>h4 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 34px*$vw;
+        line-height: 41px*$vw;
+        color: #0AABC1;
+        margin-bottom: 15px*$vw;
+    }
+    &>h3 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 61px*$vw;
+        line-height: 74px*$vw;
+        color: #323232;
+        margin-bottom: 50px*$vw;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .History {
+        width: 100%;
+        padding: 50px*$TELvw*0.5 20px*$TELvw*0.5;
+
+        &>h4 {
+            font-size: 34px*$TELvw*0.5;
+            line-height: 41px*$TELvw*0.5;
+            margin-bottom: 15px*$TELvw*0.5;
+        }
+        &>h3 {
+            font-size: 61px*$TELvw*0.5;
+            line-height: 74px*$TELvw*0.5;
+            margin-bottom: 50px*$TELvw*0.5;
+        }
+    }
+}

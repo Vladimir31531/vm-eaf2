@@ -1,0 +1,290 @@
+@import "../../globalStyles";
+
+
+.SingleNew_sidebar {
+    width: 330px*$vw;
+
+    @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+    gap: 50px*$vw;
+}
+.sidebar_block {
+    width: 100%;
+
+    @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+    .title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px*$vw;
+        line-height: 27px*$vw;
+        color: #cc9955;
+        margin-bottom: 20px*$vw;
+    }
+    .sidebar_block_content {
+        width: 100%;
+        gap: 20px*$vw;
+
+        @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+        .small_newCard {
+            .title {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px*$vw;
+                line-height: 17px*$vw;
+                color: #fff;
+                margin-bottom: 12px*$vw;
+            }
+            button {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px*$vw;
+                line-height: 130.4%;
+                color: #fff;
+            }
+        }
+    }
+}
+.sidebar_searchForm {
+    width: 100%;
+    position: relative;
+
+    @include flex(flex, row, nowrap, flex-start, center, unset);
+
+    input {
+        width: 100%;
+        height: 33px*$vw;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px*$vw solid #fff;
+        color: #fff;
+
+        &::placeholder {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px*$vw;
+            line-height: 17px*$vw;
+            color: #fff;
+        }
+    }
+    button {
+        width: 21px*$vw;
+        height: 24px*$vw;
+        position: absolute;
+        right: 0;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px*$vw;
+        line-height: 17px*$vw;
+        color: #fff;
+
+        @include flex(flex, row, nowrap, center, center, unset);
+
+        svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            
+            path,
+            line {
+                stroke: #fff;
+            }
+        }
+    }
+}
+.sidebar_categs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px*$vw;
+
+    li {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px*$vw;
+        line-height: 22px*$vw;
+        color: #fff;
+
+        &:hover {
+            color: #fff;
+
+            &::before {
+                color: #fff;
+            }
+        }
+
+        &::before {
+            content: '\203A';
+            font-size: 25px*$vw;
+            color: #fff;
+            margin-right: 7px*$vw;
+            margin-bottom: 7px*$vw;
+        }
+    }
+}
+.sidebar_close {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .SingleNew_sidebar {
+        width: 100%;
+        height: 110vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: 0.3s;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 80px*$TELvw 20px*$TELvw 100px*$TELvw 20px*$TELvw;
+        gap: 50px*$TELvw;
+        overflow-y: auto;
+    }
+    .sidebar_block {
+        width: 100%;
+
+        .title {
+            font-size: 22px*$TELvw;
+            line-height: 27px*$TELvw;
+            margin-bottom: 20px*$TELvw;
+        }
+        .sidebar_block_content {
+            width: 100%;
+            gap: 20px*$TELvw;
+
+            .small_newCard {
+                width: 100%;
+
+                .content {
+                    width: 70%;
+                }
+                .img {
+                    width: 85px*$TELvw;
+                    height: 85px*$TELvw;
+                }
+                .title {
+                    font-size: 14px*$TELvw;
+                    line-height: 17px*$TELvw;
+                    margin-bottom: 12px*$TELvw;
+                    color: #fff;
+                }
+                button {
+                    font-size: 14px*$TELvw;
+                }
+            }
+        }
+    }
+    .sidebar_searchForm {
+        width: 100%;
+        position: relative;
+
+        input {
+            width: 100%;
+            height: 33px*$TELvw;
+            border-bottom: 1px*$TELvw solid #fff;
+            color: #fff;
+
+            &::placeholder {
+                font-size: 14px*$TELvw;
+                line-height: 17px*$TELvw;
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+        button {
+            width: 21px*$TELvw;
+            height: 24px*$TELvw;
+            font-size: 14px*$TELvw;
+            line-height: 17px*$TELvw;
+
+            svg {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                
+                path,
+                line {
+                    stroke: #fff;
+                }
+            }
+        }
+    }
+    .sidebar_categs {
+        width: 100%;
+        gap: 15px*$vw;
+
+        li {
+            font-size: 18px*$TELvw;
+            line-height: 22px*$TELvw;
+            color: #fff;
+
+            &::before {
+                content: '\203A';
+                font-size: 25px*$TELvw;
+                color: #fff;
+                margin-right: 7px*$TELvw;
+                margin-bottom: 7px*$TELvw;
+            }
+        }
+    }
+    .sidebar_close {
+        @include flex(flex, column, nowrap, space-between, center, unset);
+        width: 30px*$TELvw;
+        height: 20px*$TELvw;
+        position: absolute;
+        top: 20px*$TELvw;
+        right: 20px*$TELvw;
+        z-index: 11;
+
+        div {
+            width: 100%;
+            height: 3px*$TELvw;
+            background-color: #fff;
+            border-radius: 1.5px*$TELvw;
+            transition: 0.3s;
+        }
+
+        div:nth-child(2) {
+            display: none;
+        }
+        div:first-child,
+        div:last-child {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%);
+        }
+        div:first-child {
+            transform: rotate(45deg);
+        }
+        div:last-child {
+            transform: rotate(-45deg);
+        }
+    }
+}

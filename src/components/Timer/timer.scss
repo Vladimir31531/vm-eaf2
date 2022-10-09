@@ -1,0 +1,64 @@
+@import "../../globalStyles";
+
+
+.SingleEvent_timer {
+    width: fit-content;
+
+    @include flex(flex, row, nowrap, flex-start, center, unset);
+}
+.SingleEvent_timer_col {
+    padding: 0 30px*$vw;
+    border-right: 0.5px*$vw solid #747474;
+
+    @include flex(flex, column, nowrap, flex-start, center, unset);
+
+    &:last-child {
+        border: none;
+    }
+
+    .num {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 42px*$vw;
+        line-height: 51px*$vw;
+        color: #cc9955;
+        margin-bottom: 5px*$vw;
+    }
+    .text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px*$vw;
+        line-height: 22px*$vw;
+        color: #747474;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .SingleEvent_timer {
+        width: fit-content;
+    }
+    .SingleEvent_timer_col {
+        padding: 0 30px*$TELvw*0.5;
+        border-right: 0.5px*$TELvw*0.5 solid #747474;
+
+        @include flex(flex, column, nowrap, flex-start, center, unset);
+
+        .num {
+            font-size: 42px*$TELvw*0.5;
+            line-height: 51px*$TELvw*0.5;
+            margin-bottom: 5px*$TELvw*0.5;
+        }
+        .text {
+            font-size: 18px*$TELvw*0.5;
+            line-height: 22px*$TELvw*0.5;
+        }
+    }
+}

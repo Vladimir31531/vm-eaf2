@@ -1,0 +1,391 @@
+@import "../../globalStyles";
+
+
+
+.header {
+    width: 100%;
+
+    @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.header_top {
+    width: 100%;
+    background-color: #323232;
+    /* background-color: #000000; */
+    padding: 8px*$vw 300px*$vw;
+
+    @include flex(flex, row, nowrap, space-between, center, unset);
+}
+.headerTop_contacts,
+.headerTop_contacts a {
+    @include flex(flex, row, nowrap, flex-start, center, unset);
+}
+.headerTop_contacts {
+    gap: 27px*$vw;
+}
+.headerTop_contacts a {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px*$vw;
+    line-height: 20px*$vw;
+    /* text-transform: uppercase; */
+    color: #FFFFFF;
+}
+.header_tel_icon {
+    width: 19px*$vw;
+    height: 15px*$vw;
+    margin-right: 10px*$vw;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+.headerTop_socials {
+    @include flex(flex, row, nowrap, flex-end, center, unset);
+    gap: 30px*$vw;
+}
+
+
+.header_nav_w {
+    width: 100%;
+    padding: 17px*$vw 300px*$vw;
+    /* background-color: #FFFBF0; */
+    background-color: #000000;
+
+    @include flex(flex, row, nowrap, space-between, center, unset);
+}
+.header_logo {
+    width: 170px*$vw*0.8;
+    height: 93px*$vw*0.8;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+.nav {
+    ul {
+        @include flex(flex, row, nowrap, space-between, center, unset);
+        gap: 40px*$vw;
+
+        li {
+            &:nth-child(3),
+            &:nth-child(4) {
+                margin-top: 1px*$vw;
+            }
+            span {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px*$vw*0.8;
+                line-height: 22px*$vw*0.8;
+                text-transform: uppercase;
+                /* color: #323232; */
+                color: #fff;
+                transition: 0.2s;
+
+                &:hover {
+                    color: #cc9955;
+                }
+            }
+            .label {
+                @include flex(flex, row, nowrap, flex-start, center, unset);
+
+                .arrow {
+                    width: 12px*$vw;
+                    height: 8px*$vw;
+                    margin-left: 10px*$vw;
+
+                    @include flex(flex, row, nowrap, center, center, unset);
+
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        /* stroke: #323232; */
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.headerNav_donate {
+    @include flex(flex, row, nowrap, flex-start, center, unset);
+    gap: 40px*$vw;
+}
+.search_btn {
+    width: 23px*$vw*0.8;
+    height: 25px*$vw*0.8;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+.burger {
+    display: none;
+}
+
+.search_w {
+    position: relative;
+}
+@keyframes showAnim {
+    0% {
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        top: 200%;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+@keyframes hideAnim {
+    0% {
+        top: 200%;
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+.header_searchForm {
+    width: fit-content;
+    padding: 20px*$vw;
+    border-radius: 10px*$vw;
+    background-color: #fff;
+    box-shadow: 7px*$vw 7px*$vw 15px*$vw #323232;
+    position: absolute;
+    top: 0%;
+    right: 0;
+
+    animation-name: hideAnim;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+
+    form {
+        @include flex(flex, row, nowrap, flex-start, center, unset);
+        gap: 20px*$vw;
+    }
+
+    input {
+        width: 262px*$vw;
+        height: 27px*$vw;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border-bottom: 1px*$vw solid #323232;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px*$vw;
+        line-height: 17px*$vw;
+        color: #323232;
+
+        &::placeholder {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px*$vw;
+            line-height: 17px*$vw;
+            color: #323232;
+        }
+    }
+}
+.header_searchForm_show {
+    animation-name: showAnim;
+    animation-duration: 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .header {
+        width: 100%;
+    }
+
+    .header_top {
+        display: none;
+    }
+    
+    .header_nav_w {
+        width: 100%;
+        padding: 10px*$TELvw 20px*$TELvw;
+    }
+    .header_logo {
+        width: 170px*$TELvw*0.8*0.4;
+        height: 93px*$TELvw*0.8*0.4;
+    }
+    .nav {
+        width: 100%;
+        height: 110vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s;
+
+        ul {
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 60px*$TELvw;
+
+            @include flex(flex, column, nowrap, flex-start, center, unset);
+
+            gap: 40px*$TELvw;
+
+            li {
+                span {
+                    font-size: 18px*$TELvw*0.8;
+                    line-height: 22px*$TELvw*0.8;
+                    color: #fff;
+                }
+                button {
+                    padding: 0;
+                }
+                .label {
+
+                    .arrow {
+                        width: 12px*$TELvw;
+                        height: 8px*$TELvw;
+                        margin-left: 10px*$TELvw;
+
+                        svg {
+                            stroke: #FFF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .openNav {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+
+
+    .headerNav_donate {
+        align-items: center;
+        gap: 10px*$TELvw;
+    }
+    .search_w {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .search_btn {
+        width: 23px*$TELvw*0.8*0.7;
+        height: 25px*$TELvw*0.8*0.7;
+    }
+
+    .burger {
+        @include flex(flex, column, nowrap, space-between, center, unset);
+        width: 30px*$TELvw;
+        height: 20px*$TELvw;
+        position: relative;
+        z-index: 11;
+
+        div {
+            width: 100%;
+            height: 3px*$TELvw;
+            background-color: #fff;
+            border-radius: 1.5px*$TELvw;
+            transition: 0.3s;
+        }
+    }
+    .burger_close {
+        position: relative;
+        z-index: 11;
+
+        div {
+            background-color: #fff;
+        }
+
+        div:nth-child(2) {
+            display: none;
+        }
+        div:first-child,
+        div:last-child {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%);
+        }
+        div:first-child {
+            transform: rotate(45deg);
+        }
+        div:last-child {
+            transform: rotate(-45deg);
+        }
+    }
+    .header_searchForm {
+        width: fit-content;
+        padding: 20px*$TELvw;
+        border-radius: 10px*$TELvw;
+        box-shadow: 7px*$TELvw 7px*$TELvw 15px*$TELvw #323232;
+        left: -120px*$TELvw;
+
+        animation-name: hideAnim;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+
+        form {
+            @include flex(flex, row, nowrap, flex-start, center, unset);
+            gap: 20px*$TELvw;
+        }
+
+        input {
+            width: 250px*$TELvw;
+            height: 27px*$TELvw;
+            border-bottom: 1px*$TELvw solid #323232;
+            font-size: 14px*$TELvw;
+            line-height: 17px*$TELvw;
+
+            &::placeholder {
+                font-size: 14px*$TELvw;
+                line-height: 17px*$TELvw;
+            }
+        }
+    }
+    .header_searchForm_show {
+        animation-name: showAnim;
+        animation-duration: 0.3s;
+    }
+}

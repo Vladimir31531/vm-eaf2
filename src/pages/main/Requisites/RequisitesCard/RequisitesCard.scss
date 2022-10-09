@@ -1,0 +1,77 @@
+@import "../../../../globalStyles";
+
+
+
+.RequisitesCard {
+    width: 100%;
+    margin-top: 50px*$vw;
+
+    @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+    gap: 30px*$vw;
+}
+.RequisitesCard_row {
+    width: 100%;
+
+    @include flex(flex, row, nowrap, space-between, center, unset);
+
+    .left {
+        .title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px*$vw;
+            line-height: 20px*$vw;
+            color: #000000;
+            margin-bottom: 10px*$vw;
+        }
+        p {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px*$vw;
+            line-height: 20px*$vw;
+            color: #000000;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .RequisitesCard {
+        width: 100%;
+        margin-top: 50px*$TELvw*0.6;
+
+        @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+        gap: 30px*$TELvw*0.6;
+    }
+    .RequisitesCard_row {
+        width: 100%;
+
+        .left {
+            width: 80%;
+            .title {
+                font-size: 16px*$TELvw*0.6;
+                line-height: 20px*$TELvw*0.6;
+                text-align: start;
+                margin-bottom: 10px*$TELvw*0.6;
+            }
+            p {
+                font-size: 16px*$TELvw*0.6;
+                line-height: 20px*$TELvw*0.6;
+            }
+        }
+    }
+}

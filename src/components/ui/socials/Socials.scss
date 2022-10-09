@@ -1,0 +1,28 @@
+@import "../../../globalStyles";
+
+
+.socials_w {
+    @include flex(flex, row, nowrap, flex-end, center, unset);
+    gap: 30px*$vw;
+}
+.headerOneSocial_icon {
+    width: 20px*$vw;
+    height: 20px*$vw;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .socials_w {
+        gap: 30px*$TELvw*0.8;
+    }
+    .headerOneSocial_icon {
+        width: 20px*$TELvw*0.8;
+        height: 20px*$TELvw*0.8;
+    }
+}

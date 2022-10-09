@@ -1,0 +1,464 @@
+@import "../../globalStyles";
+
+
+
+.Donate_w {
+    width: 100%;
+    padding: 0 300px*$vw;
+    margin-top: 76px*$vw;
+
+    @include flex(flex, column, nowrap, flex-start, center, unset);
+
+    h4 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 34px*$vw;
+        line-height: 41px*$vw;
+        color: #cc9955;
+        margin-bottom: 15px*$vw;
+    }
+    h3 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 61px*$vw;
+        line-height: 74px*$vw;
+        color: #fff;
+        margin-bottom: 50px*$vw;
+    }
+
+    .donate_inner {
+        width: 100%;
+
+        @include flex(flex, row, nowrap, flex-start, flex-start, unset);
+
+        gap: 80px*$vw;
+    }
+
+    .forms_btns {
+        @include flex(flex, column, nowrap, flex-start, center, unset);
+        gap: 20px*$vw;
+
+        a {
+            width: 290px*$vw;
+
+            .form_link {
+                width: 816px*$vw;
+                height: 179px*$vw;
+                padding: 15px*$vw;
+                background: #E59E45;
+                position: relative;
+
+                @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+                .title {
+                    max-width: 80%;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 32px*$vw*0.8;
+                    line-height: 39px*$vw*0.8;
+                    text-transform: uppercase;
+                    color: #000000;
+                    margin-bottom: 30px*$vw;
+                }
+                .text {
+                    max-width: 80%;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px*$vw;
+                    line-height: 20px*$vw;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                }
+                .arrow {
+                    width: 75px*$vw;
+                    height: 22px*$vw;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
+.Donate_bgText {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 180px*$vw;
+    line-height: 219px*$vw;
+    color: rgba(192, 192, 192, 0.1);
+    position: absolute;
+    top: 300px*$vw;
+    z-index: -1;
+}
+#donate_form {
+    display: none;
+}
+
+
+.Donate_content {
+    width: 100%;
+    padding: 50px*$vw;
+    background-color: #0AABC1;
+    border-radius: 20px*$vw;
+
+    @include flex(flex, column, nowrap, flex-start, center, unset);
+
+    .row {
+        width: 100%;
+        margin-bottom: 50px*$vw;
+
+        @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+        .row_content {
+            width: 100%;
+        }
+
+        .title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px*$vw;
+            line-height: 29px*$vw;
+            color: #FFFFFF;
+            margin-bottom: 25px*$vw;
+        }
+        .donate_amount {
+            width: 100%;
+
+            @include flex(flex, row, wrap, flex-start, center, unset);
+            gap: 50px*$vw;
+
+            .donate_item {
+                width: 200px*$vw;
+                height: 50px*$vw;
+                background-color: transparent;
+                border: 2px*$vw solid #FFFFFF;
+                border-radius: 10px*$vw;
+                cursor: pointer;
+
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px*$vw;
+                line-height: 29px*$vw;
+                color: #FFFFFF;
+
+                @include flex(flex, row, nowrap, center, center, unset);
+            }
+            .donate_item_selected {
+                background-color: #fff;
+                color: #0AABC1;
+            }
+
+            input {
+                width: 100%;
+                height: 50px*$vw;
+                border: 2px*$vw solid #FFFFFF;
+                border-radius: 10px*$vw;
+                background-color: transparent;
+                outline: none;
+                padding-left: 17px*$vw;
+
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px*$vw;
+                line-height: 17px*$vw;
+                color: rgb(255, 255, 255);
+
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.7);
+                }
+            }
+        }
+    }
+}
+
+
+
+.donate_form_row {
+    width: 100%;
+
+    @include flex(flex, column, nowrap, flex-start, center, unset);
+}
+.donator_info {
+    width: 100%;
+    margin-bottom: 50px*$vw;
+
+    @include flex(flex, row, wrap, space-between, flex-start, unset);
+
+    input {
+        width: 580px*$vw;
+        height: 37px*$vw;
+    }
+    textarea {
+        width: 100%;
+        height: 70px*$vw;
+        margin-top: 15px*$vw;
+        resize: none;
+    }
+    input,
+    textarea {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border-bottom: 1px*$vw solid #FFFFFF;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px*$vw;
+        line-height: 17px*$vw;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+
+        &::placeholder {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px*$vw;
+            line-height: 17px*$vw;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+        }
+    }
+}
+.donate_form_btn {
+    padding: 20px*$vw 150px*$vw;
+    background: #FFFFFF;
+    border-radius: 35px*$vw;
+    border: none;
+    outline: none;
+    margin: 0 auto;
+    cursor: pointer;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px*$vw;
+    line-height: 24px*$vw;
+    text-transform: uppercase;
+    color: #0AABC1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .Donate_w {
+        width: 100%;
+        padding: 0 20px*$TELvw;
+        margin-top: 42px*$TELvw;
+
+        @include flex(flex, column, nowrap, flex-start, center, unset);
+
+        h4 {
+            font-size: 34px*$TELvw*0.5;
+            line-height: 41px*$TELvw*0.5;
+            margin-bottom: 15px*$TELvw*0.5;
+            text-align: center;
+        }
+        h3 {
+            font-size: 61px*$TELvw*0.5;
+            line-height: 74px*$TELvw*0.5;
+            margin-bottom: 50px*$TELvw*0.5;
+            text-align: center;
+        }
+
+        .donate_inner {
+            width: 100%;
+
+            @include flex(flex, column, nowrap, flex-start, center, unset);
+
+            gap: 80px*$vw;
+        }
+
+        .forms_btns {
+            width: 100%;
+            @include flex(flex, column, nowrap, flex-start, center, unset);
+            gap: 20px*$TELvw*0.6;
+
+            a {
+                width: 100%;
+
+                .form_link {
+                    width: 100%;
+                    height: unset;
+                    padding: 15px*$TELvw*0.7;
+                    background: #E59E45;
+                    position: relative;
+
+                    @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+                    .title {
+                        max-width: 80%;
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 32px*$TELvw*0.7*0.8;
+                        line-height: 39px*$TELvw*0.7*0.8;
+                        text-transform: uppercase;
+                        text-align: start;
+                        color: #000000;
+                        margin-bottom: 30px*$vw;
+                    }
+                    .text {
+                        max-width: 80%;
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px*$TELvw*0.7;
+                        line-height: 20px*$TELvw*0.7;
+                        text-transform: uppercase;
+                        color: #FFFFFF;
+                    }
+                    .arrow {
+                        width: 75px*$TELvw*0.7;
+                        height: 22px*$TELvw*0.7;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    }
+    .Donate_bgText {
+        font-size: 180px*$vw;
+        line-height: 219px*$vw;
+        top: 300px*$vw;
+    }
+    .Donate_content {
+        width: 100%;
+        padding: 50px*$TELvw*0.3;
+        border-radius: 20px*$TELvw*0.3;
+
+        .row {
+            width: 100%;
+            margin-bottom: 50px*$vw;
+
+            @include flex(flex, column, nowrap, flex-start, flex-start, unset);
+
+            .row_content {
+                width: 100%;
+            }
+
+            .title {
+                font-size: 24px*$TELvw*0.7;
+                line-height: 29px*$TELvw*0.7;
+                margin-bottom: 25px*$TELvw*0.7;
+            }
+            .donate_amount {
+                width: 100%;
+
+                @include flex(flex, row, wrap, flex-start, center, unset);
+                gap: 20px*$TELvw;
+
+                .donate_item {
+                    width: 200px*$TELvw*0.675;
+                    height: 50px*$TELvw*0.675;
+                    border: 2px*$TELvw*0.675 solid #FFFFFF;
+                    border-radius: 10px*$TELvw*0.675;
+                    font-size: 24px*$TELvw*0.675;
+                    line-height: 29px*$TELvw*0.675;
+                }
+
+                input {
+                    height: 50px*$TELvw*0.6;
+                    border: 2px*$TELvw*0.6 solid #FFFFFF;
+                    border-radius: 10px*$TELvw*0.6;
+                    padding-left: 17px*$TELvw*0.6;
+                    font-size: 14px*$TELvw*0.9;
+                    line-height: 17px*$TELvw*0.9;
+                }
+            }
+        }
+    }
+
+
+
+    .donate_form_row {
+        width: 100%;
+
+        @include flex(flex, column, nowrap, flex-start, center, unset);
+    }
+    .donator_info {
+        width: 100%;
+        margin-bottom: 50px*$TELvw*0.9;
+
+        @include flex(flex, row, wrap, space-between, flex-start, unset);
+
+        input {
+            width: 580px*$TELvw*0.9;
+            height: 37px*$TELvw*0.9;
+        }
+        textarea {
+            width: 100%;
+            height: 70px*$TELvw*0.9;
+            margin-top: 15px*$TELvw*0.9;
+            resize: none;
+        }
+        input,
+        textarea {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            border-bottom: 1px*$TELvw*0.9 solid #FFFFFF;
+
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px*$TELvw*0.9;
+            line-height: 17px*$TELvw*0.9;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+
+            &::placeholder {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px*$TELvw*0.9;
+                line-height: 17px*$TELvw*0.9;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+            }
+        }
+    }
+    .donate_form_btn {
+        padding: 20px*$TELvw*0.5 150px*$TELvw*0.5;
+        background: #FFFFFF;
+        border-radius: 35px*$TELvw*0.5;
+        border: none;
+        outline: none;
+        margin: 0 auto;
+        cursor: pointer;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px*$TELvw*0.5;
+        line-height: 24px*$TELvw*0.5;
+        text-transform: uppercase;
+        color: #0AABC1;
+    }
+
+
+    
+}

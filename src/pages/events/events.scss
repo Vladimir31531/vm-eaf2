@@ -1,0 +1,145 @@
+@import "../../globalStyles";
+
+
+
+
+.Events_w {
+    width: 100%;
+    padding: 0 300px*$vw;
+    margin-top: 76px*$vw;
+
+    @include flex(flex, column, wrap, flex-start, center, unset);
+
+    h4 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 34px*$vw;
+        line-height: 41px*$vw;
+        color: #cc9955;
+        margin-bottom: 15px*$vw;
+    }
+    h3 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 61px*$vw;
+        line-height: 74px*$vw;
+        color: #fff;
+        margin-bottom: 50px*$vw;
+    }
+}
+.Events_bgText {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 180px*$vw;
+    line-height: 219px*$vw;
+    color: rgba(192, 192, 192, 0.1);
+    position: absolute;
+    top: 300px*$vw;
+    z-index: -1;
+}
+
+.EventsPage_content {
+
+    font-size: 20px*$vw;
+    line-height: 24px*$vw;
+
+    width: 100%;
+    margin-bottom: 50px*$vw;
+
+    @include flex(flex, row, wrap, flex-start, flex-start, unset);
+
+    gap: 36px*$vw;
+
+    .Events_card {
+        width: 410px*$vw;
+        overflow: hidden;
+
+        .Events_card_img {
+            width: 100%;
+        }
+
+        .Events_card_date {
+            padding: 15px*$vw*0.6 20px*$vw*0.6;
+
+            .num {
+                font-size: 28px*$vw*0.6;
+                line-height: 34px*$vw*0.6;
+            }
+            .month {
+                font-size: 20px*$vw*0.6;
+                line-height: 24px*$vw*0.6;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .Events_w {
+        width: 100%;
+        padding: 0 20px*$TELvw;
+        margin-top: 42px*$TELvw;
+
+        h4 {
+            font-size: 34px*$TELvw*0.5;
+            line-height: 41px*$TELvw*0.5;
+            margin-bottom: 15px*$TELvw*0.5;
+        }
+        h3 {
+            font-size: 61px*$TELvw*0.5;
+            line-height: 74px*$TELvw*0.5;
+            margin-bottom: 50px*$TELvw*0.5;
+        }
+    }
+    .Events_bgText {
+        font-size: 180px*$vw;
+        line-height: 219px*$vw;
+        top: 120px*$TELvw;
+    }
+    .EventsPage_content {
+
+        font-size: 20px*$TELvw;
+        line-height: 24px*$TELvw;
+
+        width: 100%;
+        margin-bottom: 50px*$TELvw;
+
+        @include flex(flex, row, wrap, flex-start, flex-start, unset);
+
+        gap: 6.5px*$TELvw;
+
+        .Events_card {
+            width: 410px*$TELvw*0.382;
+            overflow: hidden;
+
+            .Events_card_img {
+                width: 100%;
+                height: 120px*$TELvw;
+            }
+
+            .Events_card_date {
+                padding: 15px*$TELvw*0.6*0.6 20px*$TELvw*0.6*0.6;
+
+                .num {
+                    font-size: 28px*$TELvw*0.6*0.6;
+                    line-height: 34px*$TELvw*0.6*0.6;
+                }
+                .month {
+                    font-size: 20px*$TELvw*0.6*0.6;
+                    line-height: 24px*$TELvw*0.6*0.6;
+                }
+            }
+        }
+    }
+}
