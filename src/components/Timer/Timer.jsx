@@ -13,7 +13,8 @@ export default function Timer({ timestamp }) {
         const elSeconds1 = document.querySelector('.Seconds .num');
 
         // 2. Установим время, например, на одну минуту от текущей даты
-        const deadline1 = new Date(timestamp);
+        // const deadline1 = new Date(timestamp);
+        const deadline1 = timestamp
 
         // 3. Создадим новый объект, используя new CountdownTimer()
         new CountdownTimer(deadline1, (timer) => {

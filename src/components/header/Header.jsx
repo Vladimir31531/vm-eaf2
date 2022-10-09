@@ -35,8 +35,6 @@ export default function Header({ setselectedEvents }) {
     }
   }, [globalSearchQuery]);
 
-  console.log(Date.parse(Date('09.09.2022')))
-
   return (
     <div className="header">
       <div className="header_top">

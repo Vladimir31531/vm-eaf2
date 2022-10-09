@@ -25,21 +25,17 @@ export let getCuttedString = (str, limit) => {
 export let getDayMonth = (timestamp, str, fullMonth) => {
     const monthNames = ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень',
         'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'];
-    let date = new Date(timestamp);
+    let date = timestamp
     let data
     if (str == 'num') {
-        console.log(date.getDate())
         data = ((date.getDate() < 10) ? '0' + date.getDate() : date.getDate())
     } else if (str == 'month') {
-        console.log(date.getMonth())
         data = (fullMonth) ? monthNames[date.getMonth()] : monthNames[date.getMonth()].slice(0, 3)
     }
     return data
 }
 export let getTimePeriod = (start, end) => {
-    let startDate = new Date(start)
-    let endDate = new Date(end)
-    return startDate.getHours() + ':' + startDate.getMinutes() + ' - ' + endDate.getHours() + ':' + endDate.getMinutes()
+    return start.getHours() + ':' + start.getMinutes() + ' - ' + end.getHours() + ':' + end.getMinutes()
 }
 
 export let getUpcomingEvents = (arr, key) => {
